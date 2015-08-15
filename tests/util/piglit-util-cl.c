@@ -80,7 +80,7 @@ piglit_cl_probe_floating(float value, float expect,  uint32_t ulp)
 
 	diff = fabsf(value - expect);
 
-	if(diff > ulp || isnan(value)) {
+	if(diff > t.f || isnan(value)) {
 		printf("Expecting %f (0x%x) with tolerance %f (%u ulps), but got %f (0x%x)\n",
 		       e.f, e.u, t.f, t.u, v.f, v.u);
 		return false;
